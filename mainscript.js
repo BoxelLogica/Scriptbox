@@ -59,7 +59,7 @@ var airTime
 
 function preload ()  {
     this.load.image('physgun', 
-        'https://raw.githubusercontent.com/TyconXon/Sunkists-Palace/refs/heads/main/users/assets/boxel/sprites/physgun.png')
+        '../sprites/physgun.png')
 
     // SOPHIE SPRITESHEET
     this.load.spritesheet('sophie', 
