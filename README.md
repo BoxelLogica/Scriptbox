@@ -13,8 +13,9 @@
 > Scriptbox is a 2D Platformer Sandbox game inspired by Garry's Mod, written with Phaser
 
 Try it out!
-> https://raw.githack.com/BoxelLogica/Scriptbox/refs/heads/main/index.html
-
+```
+https://raw.githack.com/BoxelLogica/Scriptbox/refs/heads/main/index.html
+```
 * Made with
 
   > ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
