@@ -63,17 +63,17 @@ function preload ()  {
 
     // SOPHIE SPRITESHEET
     this.load.spritesheet('sophie', 
-        'https://raw.githubusercontent.com/TyconXon/Sunkists-Palace/refs/heads/main/users/assets/boxel/sprites/sophie.png', 
+        '../sprites/sophie.png', 
          { frameWidth: 20, frameHeight: 24 }
     )
     // PLAYERTEST SPRITESHEET
     this.load.spritesheet('playerTest', 
-        'https://raw.githubusercontent.com/TyconXon/Sunkists-Palace/refs/heads/main/users/assets/boxel/sprites/green_test_sprite.png', 
+        '../sprites/green_test_sprite.png', 
          { frameWidth: 32, frameHeight: 32 }
     )
     // PLAYERTEST MISSINGTEXTURE
     this.load.spritesheet('missingTexture', 
-        'https://raw.githubusercontent.com/TyconXon/Sunkists-Palace/refs/heads/main/users/assets/boxel/sprites/missingTexture.png', 
+        '../sprites/missingTexture.png', 
          { frameWidth: 32, frameHeight: 32 }
     )
 }
@@ -84,7 +84,7 @@ function preload ()  {
 
 function create ()  {
     // SETUP PLAYER
-    player = this.physics.add.sprite(centerX, centerY).setOrigin(0.5, 1)
+    player = this.physics.add.sprite(centerX, centerY, 'sophie').setOrigin(0.5, 1)
     player.body.width = 20
     player.body.height = 24
     player.body.setDrag(1000, 0)
@@ -252,7 +252,7 @@ function update () {
 
     // ACTIVELY CONTROL ANIMATIONS
     animationHandler()
-    aimHandler()
+    weaponHandler()
     speedHandler()
 }
 
@@ -293,7 +293,7 @@ function animationHandler() {
     }
 }
 
-function aimHandler() {
+function weaponHandler() {
     var aimX = 0
     var aimY = 0
 
@@ -304,8 +304,11 @@ function aimHandler() {
 
     if (aimX !== 0 || aimY !== 0) {
         var aimAngle = Math.atan2(aimX, -aimY)
-        player.rotation = aimAngle
+        physgun.rotation = aimAngle
     }
+
+    physgun.x = player.x
+    physgun.y = player.y
 
 
     camera.setFollowOffset(-aimX * 20, -aimY * 20 + 30) 
