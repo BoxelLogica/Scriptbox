@@ -64,17 +64,17 @@ function preload ()  {
     // SOPHIE SPRITESHEET
     this.load.spritesheet('sophie', 
         './sprites/sophie.png', 
-         { frameWidth: 20, frameHeight: 24 }
+        { frameWidth: 20, frameHeight: 24 }
     )
     // PLAYERTEST SPRITESHEET
     this.load.spritesheet('playerTest', 
         './sprites/green_test_sprite.png', 
-         { frameWidth: 32, frameHeight: 32 }
+        { frameWidth: 32, frameHeight: 32 }
     )
     // PLAYERTEST MISSINGTEXTURE
     this.load.spritesheet('missingTexture', 
         './sprites/missingTexture.png', 
-         { frameWidth: 32, frameHeight: 32 }
+        { frameWidth: 32, frameHeight: 32 }
     )
 }
 
@@ -305,6 +305,12 @@ function weaponHandler() {
     if (aimX !== 0 || aimY !== 0) {
         var aimAngle = Math.atan2(aimX, -aimY)
         physgun.rotation = aimAngle
+        if (aimX < 0) {
+            physgun.flipY = true
+        }
+        else {
+            physgun.flipY = false
+        }
     }
 
     physgun.x = player.x
