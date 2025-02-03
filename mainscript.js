@@ -59,21 +59,21 @@ var airTime
 
 function preload ()  {
     this.load.image('physgun', 
-        '../sprites/physgun.png')
+        '/sprites/physgun.png')
 
     // SOPHIE SPRITESHEET
     this.load.spritesheet('sophie', 
-        '../sprites/sophie.png', 
+        '/sprites/sophie.png', 
          { frameWidth: 20, frameHeight: 24 }
     )
     // PLAYERTEST SPRITESHEET
     this.load.spritesheet('playerTest', 
-        '../sprites/green_test_sprite.png', 
+        '/sprites/green_test_sprite.png', 
          { frameWidth: 32, frameHeight: 32 }
     )
     // PLAYERTEST MISSINGTEXTURE
     this.load.spritesheet('missingTexture', 
-        '../sprites/missingTexture.png', 
+        '/sprites/missingTexture.png', 
          { frameWidth: 32, frameHeight: 32 }
     )
 }
