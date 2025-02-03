@@ -105,7 +105,7 @@ function create ()  {
     physLine.visible = false
 
 
-    physgun = this.add.sprite(player.x, player.y, 'physgun').setOrigin(1,1)
+    physgun = this.add.sprite(player.x, player.y, 'physgun').setOrigin(0,0.5)
 
 
     // DEFINE INPUTS
@@ -304,7 +304,7 @@ function weaponHandler() {
 
     if (aimX !== 0 || aimY !== 0) {
         var aimAngle = Math.atan2(aimX, -aimY)
-        physgun.rotation = aimAngle
+        physgun.rotation = aimAngle - 90
         if (aimX < 0) {
             physgun.flipY = true
         }
