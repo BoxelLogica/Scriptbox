@@ -59,7 +59,7 @@ var airTime
 
 function preload ()  {
     this.load.image('physgun', 
-        '/sprites/physgun.png')
+        './sprites/physgun.png')
 
     // SOPHIE SPRITESHEET
     this.load.spritesheet('sophie', 
